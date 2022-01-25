@@ -1,0 +1,11 @@
+img{
+    width: 200px;
+}
+
+.nav{
+    float:left;
+}
+
+li{
+    display: inline;
+}
