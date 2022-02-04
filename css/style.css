@@ -6,11 +6,9 @@ img {
     border-radius: 10px;
 }
 
-img:hover{
+img:nth-child(4n+2):hover {
     border: 10px solid #000;
 }
-
-
 
 header {
     background-color: #9ffbd6;
