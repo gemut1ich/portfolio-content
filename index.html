@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>My Personal Site</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="./css/html5reset.css">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="icon" href="./images/UMICH.png">
-    </head>
-    <body>
+
+<head>
+    <title>My Personal Site</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet"
+          href="./css/html5reset.css">
+    <link rel="stylesheet"
+          href="./css/style.css">
+    <link rel="icon"
+          href="./images/UMICH.png">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
     <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="covid.html">Covid</a></li>
-            <li><a href="travel.html">Travel</a></li>
-            <li><a href="umich.html">UMich</a></li>
-          </ul>
-    </nav>
-</header>
-<main>
-<div class="welcome">
-    <h1><strong>Welcome</strong> to My Personal Site</h1>
-    <p>I am a sophomore at the University of Michigan and my major is CS. I enjoy traveling and photography and I have traveled to many countries and regions. I love different cultures, and I like to record different human and natural landscapes with my camera. I have put some of my photos and my thoughts on this website.</p>
-</div>
-    <div class='avatar'>
-        <p>Here is my favorite avatar <strong>Doraemon</strong></p>
-        <img src="./images/doraemon.jpeg" alt="Doraemon smiles as he stands in Nobita's room and waves">
-        <p>Doraemon was the first Japanese anime I watched and one that I really liked. Since then, I have watched many other Japanese animations and I have become interested in the cultures of different countries as a result.</p>
-    </div>
-    <div class='form'>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="covid.html">Covid</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="umich.html">UMich</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="welcome">
+            <h1><strong>Welcome</strong> to My Personal Site</h1>
+            <p>I am a sophomore at the University of Michigan and my major is CS. I enjoy traveling and photography and
+                I have traveled to many countries and regions. I love different cultures, and I like to record different
+                human and natural landscapes with my camera. I have put some of my photos and my thoughts on this
+                website.</p>
+        </div>
+        <div class='avatar'>
+            <p>Here is my favorite avatar <strong>Doraemon</strong><br/>Doraemon was the first Japanese anime I watched and one that I really liked. Since then, I have watched
+                many other Japanese animations and I have become interested in the cultures of different countries as a
+                result.</p>
+            <img id="doraemon-img"
+                 src="./images/doraemon.jpeg"
+                 alt="Doraemon smiles as he stands in Nobita's room and waves">
+        </div>
+        <!-- <div class='form'>
     <form action="https://formspree.io/f/xnqwzdvb"
   method="POST">
   <fieldset> 
@@ -43,10 +58,52 @@
     <input type = "submit" value = "Save!">
   </fieldset>
 </form>
-    </div>
-</main>
-<footer>
-    <p>Copyright © 2022</p>
-</footer>
+    </div> -->
+
+        <div class="container">
+            <form>
+                <p> Contact form: </p>
+                <div>
+                    <label for="fname">First Name</label>
+                    <input type="text"
+                           id="fname"
+                           name="firstname"
+                           placeholder="Your name..">
+                </div>
+                <div>
+                    <label for="lname">Last Name</label>
+                    <input type="text"
+                           id="lname"
+                           name="lastname"
+                           placeholder="Your last name..">
+                </div>
+                <div>
+                    <label for="country">Country</label>
+                    <select id="country"
+                            name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject"
+                              name="subject"
+                              placeholder="Write something.."
+                              style="height:200px"></textarea>
+                </div>
+                <div>
+                    <input type="submit"
+                           value="Submit">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+
+        <p><i class="fa fa-camera-retro"></i> Copyright © 2022</p>
+    </footer>
 </body>
+
 </html>

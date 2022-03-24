@@ -6,22 +6,46 @@ img {
     border-radius: 10px;
 }
 
+h1 {
+    margin-top: 30px;
+}
+
 img:nth-child(4n+2):hover {
     border: 10px solid #000;
 }
 
 header {
-    background-color: #9ffbd6;
+    /* background-color: #9ffbd6; */
     position: fixed;
     width: 100%;
     z-index: 10;
     border-bottom-width: 1px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0 0 10px 10px;
   }
 
 ul {
     margin: 30px auto;
     padding: 0 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 10px;
+    border: solid #000;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  li:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: solid #fff;
   }
 
 a {
@@ -29,21 +53,18 @@ a {
     color: #000;
     font-weight: bold;
     text-decoration: none;
-    border: solid #000;
-    border-radius: 10px;
     padding: 10px;
+    font-family: 'Space Mono', monospace;
 }
 
-a:hover {
- border: solid #E44D26
-}
   
   h1 {
-    color: #DEE9ED;
+    color: black;
     font-family: 'Oswald', sans-serif;
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 700;
     text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
   }
   
   li {
@@ -58,17 +79,42 @@ a:hover {
   }
 
   p {
-    color: #d4d4d4;
+    color: black;
     font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
     font-size: 18px;
+    border: solid #000;
+    margin: 10px;
+    /* box-shadow: 0 0 10px #000; */
+    border-radius: 10px;
+    padding: 10px;
+    /* white background ; */
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Space Mono', monospace;
   }
+
+  @keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#doraemon-img {
+  display: block;
+  margin: 20px auto;
+  width: 30%;
+  animation: rotate 3s linear;
+}
 
   .welcome p {
     margin-top: 10px;
     padding: 10px;
   }
   .welcome {
-    background-color: #252526;
+    /* background-color: #252526; */
     box-sizing: border-box;
     padding: 30px;
     text-align: center;
@@ -77,20 +123,26 @@ a:hover {
     top: 100px;
   }
 
-  .avatar, .form {
-    background-color: aquamarine;
+  .avatar{
+    /* background-color: aquamarine; */
     text-align: left;
     position: relative;
     top: 65px;
+    display: flex;
   }
 
-  .avatar p, .form{
+  .avatar p{
     display: block;
     color: #252526;
+    flex-grow: 2;
+  }
+
+  .avatar img{
+    flex-grow: 1;
   }
 
   .img {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     text-align: left;
     position: relative;
     top: 65px;
@@ -103,10 +155,11 @@ a:hover {
   }
 
   footer {
-    background-color: #DBE9EE;
+    /* background-color: #DBE9EE; */
     text-align: center;
     position: relative;
-    top: 45px;
+    /* top: 45px; */
+    margin-top: 50px;
   }
 
   footer p{
@@ -114,4 +167,31 @@ a:hover {
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
     margin-top: 20px;
+  }
+
+  footer i {
+    color: #252526;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+  }
+
+  html {
+    background-image: url("../images/Vincent_van_Gogh_-_Bank_of_the_Seine_-_Google_Art_Project.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+  }
+
+  .container {
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  justify-content: center;
+  }
+
+  form{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 10px;
   }
