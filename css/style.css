@@ -111,7 +111,7 @@ a {
 
 @media (prefers-reduced-motion) {
   #doraemon-img {
-    animation: dissolve;
+    animation: dissolve 3s linear;
   }
 }
 
