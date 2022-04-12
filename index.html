@@ -29,38 +29,26 @@
 
         gtag('config', 'G-KZ2PD6348R');
         window.addEventListener("load", () => {
-  document.getElementsByTagName("form")[0].addEventListener("submit", (e) => {
-    e.preventDefault();
-    const form = e.target.elements;
-    const name = form[0].value;
-    const university = form[1].value;
-    const email = form[2].value;
-    console.log(name, university, email);
-    const item = {
-      Name: name,
-      University: university,
-      Email: email,
-      id : Date.now()
-    };
-    
-    //post to database localhost:8000/api/infos/${item.id}/
-    fetch("http://localhost:8000/api/infos/" + item.id, {
-      method: "POST",
-      body: JSON.stringify(item)
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-      });
-    
-  });
-});
-    
+            document.getElementsByTagName("form")[0].addEventListener("submit", (e) => {
+                e.preventDefault();
+                const form = e.target.elements;
+                const name = form[0].value;
+                const university = form[1].value;
+                const email = form[2].value;
+                //pop out an alert to show the user that the form has been submitted
+                alert(`Thank you for your submission, ${name}! We will contact you at ${email}`);
+            });
+        });
+
 
     </script>
     <style type="text/css">
-        body { background: none !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-     </style>
+        body {
+            background: none !important;
+        }
+
+        /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+    </style>
 </head>
 
 <body>
@@ -124,6 +112,8 @@
                         class="btn btn-primary">Submit</button>
 
             </form>
+            <div class="contact-info">
+            </div>
         </div>
     </main>
     <footer>
