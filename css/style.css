@@ -245,3 +245,17 @@ html {
   width: 300px;
   height: 130px;
 }
+
+.skip-to-content-link {
+  background: #e77e23;
+  height: 30px;
+  left: 0;
+  padding: 8px;
+  position: absolute;
+  transition: transform 0.3s;
+  transform: translateX(-100%);
+}
+
+.skip-to-content-link:focus {
+  transform: translateX(0%);
+}
