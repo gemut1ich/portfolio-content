@@ -602,3 +602,7 @@ a.anchor {
   transform: rotateY(180deg);
   
 }
+
+.contact-form-para {
+  margin-top: 20px;
+}
