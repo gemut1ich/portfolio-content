@@ -115,7 +115,7 @@ p, h1 {
 }
 @media (prefers-reduced-motion) {
   #doraemon-img {
-    animation: dissolve 3s linear;
+    animation: none;
  }
 }
 .welcome {
