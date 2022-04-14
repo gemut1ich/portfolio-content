@@ -23,24 +23,43 @@
     <script async
             src="https://www.googletagmanager.com/gtag/js?id=G-KZ2PD6348R"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        async function sendContact(ev) {
+            ev.preventDefault();
 
-        gtag('config', 'G-KZ2PD6348R');
-        window.addEventListener("load", () => {
-            document.getElementsByTagName("form")[0].addEventListener("submit", (e) => {
-                e.preventDefault();
-                const form = e.target.elements;
-                const name = form[0].value;
-                const university = form[1].value;
-                const email = form[2].value;
-                //pop out an alert to show the user that the form has been submitted
-                alert(`Thank you for your submission, ${name}! We will contact you at ${email}`);
+            const email = document
+                .getElementById('InputEmail').value;
+            const name = document
+                .getElementById('Name').value;
+            const university = document
+                .getElementById('University').value;
+
+            const webhookBody = {
+                embeds: [{
+                    title: 'Contact Form Submitted',
+                    fields: [
+                        { name: 'Name', value: name },
+                        { name: 'Email', value: email },
+                        { name: 'University', value: university }
+                    ]
+                }],
+            };
+
+            const webhookUrl = 'https://discord.com/api/webhooks/963973170208051240/EKfhEOFsXCmFJQai3CxRXaO-bE-cnAQxHEJIr5LReFdj2baQTIbIhdqP1QV-VFWsFiy9';
+
+            const response = await fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(webhookBody),
             });
-        });
 
-
+            if (response.ok) {
+                alert(`Great ${name}, I've received your message at discord!`);
+            } else {
+                alert('There was an error! Try again later!');
+            }
+        }
     </script>
 </head>
 
@@ -64,7 +83,8 @@
         <div class="welcome">
             <h1><strong>Welcome</strong> to My Personal Site</h1>
         </div>
-        <a class="anchor" id="main"></a>
+        <a class="anchor"
+           id="main"></a>
         <div class="container">
             <p>I am a sophomore at the University of Michigan and my major is CS. I enjoy traveling and photography and
                 I have traveled to many countries and regions. I love different cultures, and I like to record different
@@ -79,7 +99,7 @@
                  src="./images/doraemon.jpeg"
                  alt="Doraemon smiles as he stands in Nobita's room and waves">
             <p> Contact form: </p>
-            <form>
+            <form onsubmit="sendContact(event)">
                 <div class="form-group">
                     <label for="Name">Name</label>
                     <input type="text"
@@ -100,7 +120,7 @@
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email"
                            class="form-control"
-                           id="exampleInputEmail1"
+                           id="InputEmail"
                            aria-describedby="emailHelp"
                            placeholder="Enter email">
                     <small id="emailHelp"
