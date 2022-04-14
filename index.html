@@ -44,7 +44,7 @@
                 }],
             };
 
-            const webhookUrl = 'https://discord.com/api/webhooks/963973170208051240/EKfhEOFsXCmFJQai3CxRXaO-bE-cnAQxHEJIr5LReFdj2baQTIbIhdqP1QV-VFWsFiy9';
+            const webhookUrl = 'https://discord.com/api/webhooks/964025709406351381/D3dixnbrnP3wR0HjRayFBMaSzLWK1g_xrNBoGEMwds0pXPqBTqHWW_chxskNrbP72idj';
 
             const response = await fetch(webhookUrl, {
                 method: 'POST',
@@ -95,9 +95,22 @@
                 and one that I really liked. Since then, I have watched
                 many other Japanese animations and I have become interested in the cultures of different countries as a
                 result.</p>
-            <img id="doraemon-img"
-                 src="./images/doraemon.jpeg"
-                 alt="Doraemon smiles as he stands in Nobita's room and waves">
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img id="doraemon-img"
+                             src="./images/doraemon.jpeg"
+                             alt="Doraemon smiles as he stands in Nobita's room and waves">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>from future</h1>
+                        <p>Will be born in 2112</p>
+                        <p>I love it!</p>
+                    </div>
+                </div>
+            </div>
+
             <p> Contact form: </p>
             <form onsubmit="sendContact(event)">
                 <div class="form-group">
