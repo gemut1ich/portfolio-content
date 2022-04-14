@@ -193,6 +193,8 @@ html {
   display: grid;
   margin: 10px;
   align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   justify-content: center;
   border: solid #000;
   border-radius: 10px;
@@ -223,9 +225,10 @@ html {
   margin-top: 20px;
   display: inline-block;
 }
-.item-umich {
+.item-umich, .item-travel {
   width: 400px;
-  height: 370px;
+  /* height: 370px; */
+  max-width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
@@ -241,6 +244,93 @@ html {
   font-size: 18px;
   margin-top: 20px;
   display: inline-block;
+}
+
+.item-travel p {
+  color: #252526;
+  font-family: "Varela Round", sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.item-travel-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.item-travel-2 {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  width: 95%;
+}
+
+
+
+.item-travel-3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.item-travel-4 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.item-travel-5 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.item-travel-6 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.item-travel-7 {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: 3;
+  grid-row-end: span 2;
+  width: 95%;
+}
+
+.item-travel-8 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.item-travel-9 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.item-travel-10 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.item-travel img {
+  width: 300px;
+  height: 130px;
 }
 .item-umich img {
   width: 300px;
@@ -266,4 +356,16 @@ a.anchor {
   position: relative;
   top: -100px;
   visibility: hidden;
+}
+
+.item-travel-2 img {
+  max-width: 100%;
+  width: 600px;
+  height: 350px;
+}
+
+.item-travel-7 img {
+  max-width: 100%;
+  width: 600px;
+  height: 350px;
 }
