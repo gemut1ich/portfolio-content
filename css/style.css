@@ -203,7 +203,6 @@ html {
   border: solid #000;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 10px;
 }
 .container-umich p {
   color: #252526;
@@ -277,6 +276,7 @@ a.anchor {
   ul {
     justify-content: space-evenly;
   }
+
   .container-travel {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -374,6 +374,7 @@ a.anchor {
   ul {
     justify-content: center;
   }
+
   .container-travel {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 0.7fr 0.7fr 0.35fr 0.35fr 0.7fr 0.7fr 0.35fr 0.35fr 
@@ -605,4 +606,8 @@ a.anchor {
 
 .contact-form-para {
   margin-top: 20px;
+}
+
+.item-umich{
+  width: 300px;
 }
