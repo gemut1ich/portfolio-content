@@ -1,6 +1,7 @@
 img {
   max-width: 200px;
-  border: 10px solid #fff;
+  /* light blue  */
+  border: 10px solid #e6e6e6;
   margin: 10px;
   padding: 0;
   border-radius: 10px;
@@ -592,7 +593,7 @@ a.anchor {
 }
 
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: #ffffff;
   transform: rotateY(180deg);
   
 }
