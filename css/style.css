@@ -101,12 +101,6 @@ p, h1 {
     transform: rotate(360deg);
  }
 }
-
-@media (prefers-reduced-motion) {
-  #doraemon-img {
-    animation: none;
- }
-}
 .welcome {
  /* background-color: #252526;
   */
@@ -156,7 +150,8 @@ footer i {
   font-size: 18px;
 }
 html {
-  background-image: url("../images/background-img.jpg");
+  /* background color light green */
+  background-color: #DBE9EE;
   background-repeat: no-repeat, repeat;
   background-size: cover;
 }
@@ -195,6 +190,8 @@ html {
   margin-top: 20px;
 }
 .container-umich {
+  row-gap: 10px;
+  column-gap: 20px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -610,4 +607,57 @@ a.anchor {
 
 .item-umich{
   width: 300px;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url(../images/background-img.jpg);
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (prefers-reduced-motion) {
+  #doraemon-img {
+    animation: none;
+ }
+
+ .skip-to-content-link {
+    transform: none;
+ }
+
+ .skip-to-content-link:focus {
+    transform: none;
+ }
+
+ .flip-card:hover .flip-card-inner {
+    transform: none;
+ }
+
+ .flip-card-back {
+    transform: none;
+ }
+
+ li {
+    transform: none;
+ }
+
+ li:hover {
+    transform: none;
+ }
+
+ .current-page {
+    transform: none;
+ }
+
+ .parallax {
+  background-attachment: scroll;
+ }
+
 }
