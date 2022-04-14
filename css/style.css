@@ -275,7 +275,7 @@ a.anchor {
 
 @media screen and (min-width: 860px) {
   ul {
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .container-travel {
     grid-template-columns: repeat(4, 1fr);
@@ -372,7 +372,7 @@ a.anchor {
 
 @media screen and (max-width: 860px){
   ul {
-    justify-content: space-around;
+    justify-content: center;
   }
   .container-travel {
     grid-template-columns: repeat(2, 1fr);
